@@ -128,7 +128,7 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
   font-size: 1.6rem; }
 
@@ -145,7 +145,7 @@ body {
   color: #777; }
 
 .btn::after {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -154,7 +154,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all 0.4s; }
 
 .btn--white::after {
   background-color: #fff; }
@@ -164,5 +164,5 @@ body {
   opacity: 0; }
 
 .btn--animated {
-  animation: moveInBottom .5s ease-out .75s;
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
