@@ -10,6 +10,10 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @include respond(phone) {
+    height: 100%;
+  }
+
   &__content {
     @include absoluteCenter;
     width: 75%;
@@ -19,16 +23,26 @@
     border-radius: 3px;
     display: table;
     overflow: hidden; // to make sure the border is not messed by the content
-
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 0.4s 0.2s;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: unset;
+    }
   }
 
   &__left {
     width: 33.3333333%;
     display: table-cell;
     vertical-align: middle;
+
+    @include respond(tab-port) {
+      width: 100%;
+      display: inline-block;
+      padding: 3rem 5rem;
+    }
   }
 
   &__right {
@@ -36,17 +50,33 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(tab-port) {
+      display: inline-block;
+      width: 35%;
+
+      &:not(:last-child) {
+        margin-right: 15rem;
+      }
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
-
     //column layout
     column-count: 2;
     -moz-column-count: 2;
